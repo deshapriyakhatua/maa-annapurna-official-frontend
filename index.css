@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+@font-face {
+    font-family: bengaliFont;
+    src: url(/maa-annapurna-official-frontend/global/files/Punarbhaba.woff);
+}
 html,
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
+    font-family: bengaliFont;
     font-size: 62.5%;
     font-size: 10px;
 }
