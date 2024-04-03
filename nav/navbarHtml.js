@@ -3,7 +3,7 @@ document.write(`
     <nav class="nav">
         <div class="container">
             <div class="logo">
-                <a href="/maa-annapurna-official-frontend">অন্নপূর্ণা মন্দির</a>
+                <a href="/maa-annapurna-official-frontend">অন্নপূর্ণা মন্দির মেনকাপুর</a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
