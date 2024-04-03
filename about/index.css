@@ -1,0 +1,23 @@
+
+@font-face {
+    font-family: 'aboutFont';
+    src: url(/maa-annapurna-official-frontend/global/files/fonts/CharukolaUltraLight.woff);
+}
+
+.about_content {
+    font-family: 'aboutFont';
+    margin-top: 85px;
+    padding: 0 30px;
+}
+
+.main_heading {
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 30px;
+}
+.details {
+    font-size: 17px;
+    color: black;
+    font-weight: 600;
+}
