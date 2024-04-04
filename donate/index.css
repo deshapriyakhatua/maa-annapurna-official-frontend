@@ -5,6 +5,16 @@
     src: url(/maa-annapurna-official-frontend/global/files/fonts/CharukolaUltraLight.woff);
 }
 
+@font-face {
+    font-family: 'secondFont';
+    src: url(/maa-annapurna-official-frontend/global/files/fonts/Chano.woff);
+}
+
+.main_content * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .main_content {
     margin-top: 100px;
     font-family: 'firstFont';
@@ -12,6 +22,55 @@
 
 .main_heading {
     text-align: center;
+    display: none;
+}
+
+.banner_container {
+    background-image: url("/maa-annapurna-official-frontend/global/files/images/people_indian_temple.png");
+    background-position: center;
+	background-size:cover;
+    height: 400px;
+    opacity: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'secondFont';
+}
+
+.banner_container span {
+    background-color: rgba(0, 0, 0, 0.371);
+    padding: 5px 10px;
+    font-size: 25px;
+}
+
+.banner_container p {
+    background-color: rgba(0, 0, 0, 0.467);
+    padding: 25px 30px;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.banner_container button {
+    background-color: rgb(180, 5, 5);
+    padding: 5px 50px;
+    font-family: 'secondFont';
+    font-size: 40px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.banner_container button:hover {
+    background-color: rgb(143, 9, 9);
+}
+
+.banner_container button:active {
+    background-color: rgb(93, 3, 3);
 }
 
 .Qr_card {
