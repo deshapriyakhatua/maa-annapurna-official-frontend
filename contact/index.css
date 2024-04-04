@@ -1,15 +1,51 @@
-
 @font-face {
-    font-family: 'firstFont';
-    src: url(/maa-annapurna-official-frontend/global/files/fonts/CharukolaUltraLight.woff);
+  font-family: 'firstFont';
+  src: url(/maa-annapurna-official-frontend/global/files/fonts/CharukolaUltraLight.woff);
 }
 
 .main_content {
-    margin-top: 100px;
-    font-family: 'firstFont';
+  margin-top: 100px;
+  font-family: 'firstFont';
+  --slider_container_height: 450px;
 }
 
 .main_heading {
-    font-size: 28px;
-    text-align: center;
+  font-size: 28px;
+  text-align: center;
+}
+
+#container {
+  position: relative;
+  width: 90%;
+  height: var(--slider_container_height);
+  border: 1px solid #333;
+  overflow: hidden;
+  margin: 25px auto;
+  --image-width: 300px;
+  --image-height: 400px;
+}
+
+.slider_image {
+  position: absolute;
+  left: calc(0px - var(--image-width));
+  width: var(--image-width);
+  height: var(--image-height);
+  object-fit: cover;
+  margin: calc( (var(--slider_container_height) - var(--image-height)) / 2 ) 0;
+  animation-name: move;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  -webkit-animation-name: move;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-timing-function: linear; 
+}
+
+@keyframes move {
+  0% {
+    left: calc(0px - var(--image-width));
+  }
+
+  100% {
+    left: 100%;
+  }
 }
