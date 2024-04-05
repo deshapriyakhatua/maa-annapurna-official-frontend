@@ -10,6 +10,10 @@
     src: url(/maa-annapurna-official-frontend/global/files/fonts/Chano.woff);
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
 .main_content * {
     padding: 0;
     margin: 0;
@@ -17,7 +21,14 @@
 }
 .main_content {
     margin-top: 100px;
+    padding: 0 100px;
     font-family: 'firstFont';
+}
+
+@media screen and (max-width: 1024px) {
+    .main_content {
+        padding: 0;
+    }
 }
 
 .main_heading {
@@ -38,12 +49,15 @@
     align-items: center;
     gap: 20px;
     font-family: 'secondFont';
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
 }
 
 .banner_container span {
     background-color: rgba(0, 0, 0, 0.371);
     padding: 5px 10px;
     font-size: 25px;
+    text-align: center;
 }
 
 .banner_container p {
@@ -51,6 +65,7 @@
     padding: 25px 30px;
     font-size: 45px;
     font-weight: 500;
+    text-align: center;
 }
 
 .banner_container button {
@@ -73,8 +88,186 @@
     background-color: rgb(93, 3, 3);
 }
 
+@media screen and (max-width: 1024px) {
+    .banner_container {
+        border-radius: 0px;
+    }
+}
+
+.achive_container {
+    margin-top: 50px;
+    padding: 30px 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: 'secondFont';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.achive_container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.achive_container .right{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    position: relative;
+}
+
+.achive_container .icon {
+    font-weight: 300;
+    color: rgb(168, 46, 2);
+}
+
+.achive_container .small_text {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(168, 46, 2);
+}
+
+.achive_container .achive_title {
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(161, 8, 8);
+}
+
+.achive_container button {
+    width: 20%;
+    background-color: rgb(255, 27, 27);
+    padding: 5px 20px;
+    font-family: 'secondFont';
+    font-size: 40px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* Safari */
+    -webkit-user-select: none; /* Chrome */     
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
+}
+
+.achive_container button:hover {
+    background-color: rgb(222, 10, 10);
+}
+
+.achive_container button:active {
+    background-color: rgb(169, 4, 4);
+}
+
+.achive_container .right > div {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.achive_container .right > div:nth-child(1) {
+    background-color: red;
+    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid2.jpg");
+    background-position: center;
+	background-size:cover;
+}
+
+.achive_container .right > div:nth-child(2) {
+    background-color: rgb(255, 77, 0);
+    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid5.jpg");
+    background-position: center;
+	background-size:cover;
+}
+
+.achive_container .right > div:nth-child(3) {
+    background-color: rgb(225, 255, 0);
+    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid4.jpg");
+    background-position: center;
+	background-size:cover;
+}
+
+.achive_container .right > div:nth-child(4) {
+    background-color: rgb(0, 30, 255);
+    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid3.jpg");
+    background-position: center;
+	background-size:cover;
+}
+
+.achive_container .right > div:nth-child(5) {
+    background-color: rgb(22, 232, 148);
+    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid.jpg");
+    background-position: center;
+	background-size:cover;
+}
+
+.achive_container .right > .circle_center {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border: 5px solid white;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+@media screen and (max-width: 1440px) {
+    
+    .achive_container .right > div {
+        width: 120px;
+        height: 120px;
+    }
+    .achive_container .right > .circle_center {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .achive_container {
+        border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .achive_container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .achive_container .left {
+        align-items: center;
+    }
+    .achive_container .small_text_container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .achive_container .left * {
+        text-align: center;
+    }
+    .achive_container .left button {
+        width: 50%;
+    }
+    .achive_container .right > div {
+        width: 150px;
+        height: 100px;
+    }
+    .achive_container .right > .circle_center {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
 .Qr_card {
     margin: auto;
+    margin-top: 50px;
     width: 350px;
     height: 700px;
     border: 0px solid rgb(206, 208, 208);

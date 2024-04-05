@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 
 @font-face {
-    font-family: 'firstFont';
-    src: url(/maa-annapurna-official-frontend/global/files/fonts/CharukolaUltraLight.woff);
+    font-family: 'secondFont';
+    src: url(/maa-annapurna-official-frontend/global/files/fonts/Kalpurush.woff);
 }
 html,
 body {
@@ -27,18 +27,133 @@ body {
 }
 
 
-.myH2 {
-	text-align:center;
-	font-size: 4rem;
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
 }
-.myP {
-	text-align: justify;
-	padding-left:15%;
-	padding-right:15%;
-	font-size: 20px;
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
 }
-@media all and (max-width:700px){
-	.myP {
-		padding:2%;
-	}
+
+.facilities_container{
+    border: 0px solid rgb(21, 255, 0);
+    font-family: 'secondFont';
+}
+
+
+h1:first-of-type {
+    font-weight: var(--weight1);
+    color: var(--varyDarkBlue);
+
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.header {
+    text-align: center;
+    line-height: 0.8;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+
+.header p {
+    margin: 0 auto;
+    line-height: 2;
+    color: var(--grayishBlue);
+}
+
+
+.box p {
+    color: var(--grayishBlue);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;  
+}
+
+img {
+    float: right;
+    height: 64px;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+.red {
+    border-top: 3px solid var(--red);
+}
+.blue {
+    border-top: 3px solid var(--blue);
+}
+.orange {
+    border-top: 3px solid var(--orange);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+
+@media (min-width: 768px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+    }
+    .box {
+        width: 255px;
+    }
+    .header p {
+        width: 30%;
+    }
+    
+}
+
+.footer_text { 
+    font-size: 11px; text-align: center; 
+}
+.footer_text a { 
+    color: hsl(228, 45%, 44%); 
 }
