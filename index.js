@@ -1,15 +1,15 @@
 
 
-window.onscroll = function () {
+window.addEventListener("scroll", () => {
     const carouselContainer = document.getElementById('carousel_container');
     if (carouselContainer) {
-        if (window.pageYOffset > 1) {
+        if (window.scrollY > 400) {
             carouselContainer.classList.add("active");
         } else {
             carouselContainer.classList.remove("active");
         }
     }
-}
+});
 
 window.addEventListener("load", ()=>{
 

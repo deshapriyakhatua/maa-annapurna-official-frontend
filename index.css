@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'secondFont';
-    src: url(/maa-annapurna-official-frontend/global/files/fonts/Kalpurush.woff);
+    src: url(/maa-annapurna-official-frontend/global/files/fonts/Mukto.woff);
 }
 
 html,
@@ -16,21 +16,6 @@ body {
     font-size: 10px;
 }
 
-/* facilities section */
-
-:root {
-    --red: hsl(0, 78%, 62%);
-    --cyan: hsl(180, 62%, 55%);
-    --orange: hsl(34, 97%, 64%);
-    --blue: hsl(212, 86%, 64%);
-    --varyDarkBlue: hsl(234, 12%, 34%);
-    --grayishBlue: hsl(229, 6%, 66%);
-    --veryLightGray: hsl(0, 0%, 98%);
-    --weight1: 200;
-    --weight2: 400;
-    --weight3: 600;
-}
-
 .body_main_container {
     margin-top: 100px;
     padding: 0 100px;
@@ -38,134 +23,15 @@ body {
 
 @media (max-width: 1024px) {
     .body_main_container {
-        margin-top:65px;
+        margin-top:63px;
         padding: 0;
     }
 }
 
-.facilities_container {
-    border: 0px solid rgb(21, 255, 0);
-    font-family: 'secondFont';
-}
 
 
-h1:first-of-type {
-    font-weight: var(--weight1);
-    color: var(--varyDarkBlue);
+/*------------ carousel container -------------*/
 
-}
-
-@media (max-width: 400px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-
-.header {
-    text-align: center;
-    line-height: 0.8;
-    margin-bottom: 50px;
-    margin-top: 70px;
-}
-
-.header p {
-    margin: 0 auto;
-    line-height: 2;
-    color: var(--grayishBlue);
-}
-
-
-.box p {
-    color: var(--grayishBlue);
-}
-
-.box {
-    border-radius: 5px;
-    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
-    padding: 30px;
-    margin: 20px;
-}
-
-img {
-    float: right;
-    height: 64px;
-}
-
-@media (max-width: 450px) {
-    .box {
-        height: 200px;
-    }
-}
-
-@media (max-width: 950px) and (min-width: 450px) {
-    .box {
-        text-align: center;
-        height: 180px;
-    }
-}
-
-.cyan {
-    border-top: 3px solid var(--cyan);
-}
-
-.red {
-    border-top: 3px solid var(--red);
-}
-
-.blue {
-    border-top: 3px solid var(--blue);
-}
-
-.orange {
-    border-top: 3px solid var(--orange);
-}
-
-h2 {
-    color: var(--varyDarkBlue);
-    font-weight: var(--weight3);
-}
-
-
-@media (min-width: 768px) {
-    .row1-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .row2-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .box-down {
-        position: relative;
-    }
-
-    .box {
-        width: 255px;
-    }
-
-    .header p {
-        width: 30%;
-    }
-
-}
-
-.footer_text {
-    font-size: 11px;
-    text-align: center;
-}
-
-.footer_text a {
-    color: hsl(228, 45%, 44%);
-}
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
 
 #carousel_container {
     position: relative;
@@ -179,15 +45,15 @@ h2 {
     bottom: 0;
     left: 0;
     pointer-events: none;
-    background: linear-gradient(0deg, #fff, transparent);
+    background: linear-gradient(0deg, #ffffff, rgba(0, 0, 0, 0));
     opacity: 0;
     z-index: 4;
-    transition: 0.2s all ease;
+    transition: 1s all ease;
 }
 
 #carousel_container.active::before {
     opacity: 1;
-    height: 50%;
+    height: 100%;
 }
 
 #carousel_container .slide {
@@ -195,14 +61,13 @@ h2 {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-    background-color: #000;
 }
 
-.carousel-item {
+#carousel_container .carousel-item {
     display: none;
 }
 
-.visible_carousel {
+#carousel_container .visible_carousel {
     display: block;
 }
 
@@ -284,7 +149,7 @@ h2 {
     display: grid;
     place-content: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.415);
 }
 
 #carousel_container .slide .slideText h1 {
@@ -293,9 +158,9 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 5vw;
     text-align: center;
-    padding-left: 5vw;
     animation-delay: 1s;
-    filter: drop-shadow(0 2px 10px #000);
+    color: white;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
     position: relative;
 }
 
@@ -354,23 +219,6 @@ h2 {
     }
 }
 
-#about {
-    color: #999;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-#about h2 {
-    color: #000;
-}
-
-#about img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
 @media (max-width: 575px) {
     #carousel_container .slide .mainImage {
         width: 130vh;
@@ -413,3 +261,114 @@ h2 {
         padding-left: 2vw;
     }
 }
+
+
+/*------------ highlights container ---------*/
+
+#highlights_container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#highlights_container .top h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #000;
+}
+
+#highlights_container .top p {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+#highlights_container .bottom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/*----------- facilities container ----------*/
+
+.facilities_container {
+    margin-top: 100px;
+    border: 0px solid rgb(21, 255, 0);
+    font-family: 'secondFont';
+}
+
+
+.facilities_container .top h2 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.facilities_container .top p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.facilities_container .row_container {
+    margin-top: 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.facilities_container .row_container .box {
+    overflow: auto;
+    min-width: 280px;
+    max-width: 280px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 1px rgba(95, 95, 95, 0.424);
+    padding: 30px;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+
+}
+
+.facilities_container .row_container .box img {
+    float: right;
+    height: 64px;
+}
+
+.facilities_container .row_container .box:nth-child(1) {
+    border-top: 3px solid red;
+}
+
+.facilities_container .row_container .box:nth-child(2) {
+    border-top: 3px solid blue;
+}
+
+.facilities_container .row_container .box:hover {
+    scale: 1.05;
+    animation: shake 0.2s ease-in-out;
+    animation-iteration-count: 1;
+}
+  
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/*------------ footer -------------*/
+
+.footer_text {
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer_text a {
+    color: hsl(228, 45%, 44%);
+}
+
