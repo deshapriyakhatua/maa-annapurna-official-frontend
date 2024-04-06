@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     },
     {
-        threshold: .2
+        threshold: .8
     })
     
     function applyObserver(observer, elements) {

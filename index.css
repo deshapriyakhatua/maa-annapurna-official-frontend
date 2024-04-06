@@ -20,6 +20,12 @@ body {
     margin-top: 100px;
     padding: 0 100px;
 }
+@media (max-width: 1440px) {
+    .body_main_container {
+        margin-top:63px;
+        padding: 30px;
+    }
+}
 
 @media (max-width: 1024px) {
     .body_main_container {
@@ -53,7 +59,7 @@ body {
 
 #carousel_container.active::before {
     opacity: 1;
-    height: 100%;
+    height: 50%;
 }
 
 #carousel_container .slide {

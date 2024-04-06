@@ -13,11 +13,17 @@ body {
     margin: 0;
 }
 
+
 /*------ for intersection observer ---------*/
 
-button, p, span, .left {
+p, span, .left {
     opacity: 0;
-    transition: all .9s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+button {
+    opacity: 0;
+    transition: all .3s ease-in-out;
 }
 
 .visible {
@@ -39,7 +45,7 @@ button, p, span, .left {
 
 @media screen and (max-width: 1440px) {
     .main_content {
-        padding: 30px;
+        padding: 0 30px;
     }
 }
 
@@ -97,10 +103,12 @@ button, p, span, .left {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    
 }
 
 .banner_container button:hover {
     background-color: rgb(143, 9, 9);
+    animation: shakeButton 150ms 2 linear;
 }
 
 .banner_container button:active {
@@ -188,6 +196,7 @@ button, p, span, .left {
 }
 
 .achive_container button {
+    min-width: max-content;
     width: 20%;
     background-color: rgb(255, 27, 27);
     padding: 5px 20px;
@@ -202,6 +211,7 @@ button, p, span, .left {
 
 .achive_container button:hover {
     background-color: rgb(222, 10, 10);
+    animation: shakeButton 150ms 2 linear;
 }
 
 .achive_container button:active {
@@ -214,6 +224,11 @@ button, p, span, .left {
     position: relative;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: all .3s ease-in-out;
+}
+
+.achive_container .right .grid>.grid_box:hover {
+    transform: scale(1.1);
 }
 
 .achive_container .right .grid>div:nth-child(1):before {
@@ -361,7 +376,7 @@ button, p, span, .left {
     gap: 50px;
     background-color: rgba(245, 10, 10, 0.819);
     background: rgb(189,5,5);
-background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgba(144,6,15,1) 58%);
+    background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgba(144,6,15,1) 58%);
     border-radius: 10px;
 }
 
@@ -389,6 +404,11 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
     background-position: center;
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: all .3s ease-in-out;
+}
+
+.another_container .left div:hover {
+    transform: scale(1.04);
 }
 
 .another_container .right p {
@@ -407,7 +427,7 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
 
 .another_container .right button {
     width: 180px;
-    background-color: rgb(255, 27, 27);
+    background-color: rgb(168, 13, 59);
     padding: 10px 40px;
     font-family: 'secondFont';
     font-size: 30px;
@@ -419,7 +439,8 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
 }
 
 .another_container .right button:hover {
-    background-color: rgb(222, 10, 10);
+    background-color: rgb(174, 11, 49);
+    animation: shakeButton 150ms 2 linear;
 }
 
 .another_container .right button:active {
@@ -451,14 +472,21 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
     border-bottom-left-radius: 50% 10%;
     border-bottom-right-radius: 50% 10%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    outline: 2000px solid rgba(0, 0, 0, 0);
+    transition: all .3s ease-in-out;
+}
+
+.another_container .bottom div:hover {
+    transform: scale(1.07) translate(0, 0px);
+    outline-color: rgba(0, 0, 0, 0.306);
 }
 
 .another_container .bottom div:nth-child(1) {
-    background-color: rgb(255, 0, 162);
+    background-color: rgb(255, 0, 51);
 }
 
 .another_container .bottom div:nth-child(2) {
-    background-color: rgb(255, 0, 68);
+    background-color: rgb(253, 26, 94);
 }
 
 .another_container .bottom div:nth-child(3) {
@@ -531,5 +559,20 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
         padding: 20px 10px 40px;
         border-bottom-left-radius: 50% 5%;
         border-bottom-right-radius: 50% 5%;
+    }
+}
+
+
+@keyframes shakeButton {
+    0% {
+      transform: translate(2px, 0);
+    }
+    50% {
+      transform: translate(-2px, 0);
+      transform: rotate(2deg);
+      opacity: .9;
+    }
+    100% {
+      transform: translate(0, 0);
     }
 }
