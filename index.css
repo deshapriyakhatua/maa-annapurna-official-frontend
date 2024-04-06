@@ -4,6 +4,7 @@
     font-family: 'secondFont';
     src: url(/maa-annapurna-official-frontend/global/files/fonts/Kalpurush.woff);
 }
+
 html,
 body {
     margin: 0;
@@ -15,18 +16,7 @@ body {
     font-size: 10px;
 }
 
-/* Home section */
-
-.home {
-    margin-top: 62px;
-    width: 100%;
-    height: 100vh;
-    background-image: url("/maa-annapurna-official-frontend/global/files/images/2.jpg");
-    background-position: center;
-	background-size:cover;
-}
-
-
+/* facilities section */
 
 :root {
     --red: hsl(0, 78%, 62%);
@@ -41,13 +31,19 @@ body {
     --weight3: 600;
 }
 
-body {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--veryLightGray);
+.body_main_container {
+    margin-top: 100px;
+    padding: 0 100px;
 }
 
-.facilities_container{
+@media (max-width: 1024px) {
+    .body_main_container {
+        margin-top:65px;
+        padding: 0;
+    }
+}
+
+.facilities_container {
     border: 0px solid rgb(21, 255, 0);
     font-family: 'secondFont';
 }
@@ -87,7 +83,7 @@ h1:first-of-type {
     border-radius: 5px;
     box-shadow: 0px 30px 40px -20px var(--grayishBlue);
     padding: 30px;
-    margin: 20px;  
+    margin: 20px;
 }
 
 img {
@@ -111,12 +107,15 @@ img {
 .cyan {
     border-top: 3px solid var(--cyan);
 }
+
 .red {
     border-top: 3px solid var(--red);
 }
+
 .blue {
     border-top: 3px solid var(--blue);
 }
+
 .orange {
     border-top: 3px solid var(--orange);
 }
@@ -133,27 +132,284 @@ h2 {
         justify-content: center;
         align-items: center;
     }
-    
+
     .row2-container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .box-down {
         position: relative;
     }
+
     .box {
         width: 255px;
     }
+
     .header p {
         width: 30%;
     }
-    
+
 }
 
-.footer_text { 
-    font-size: 11px; text-align: center; 
+.footer_text {
+    font-size: 11px;
+    text-align: center;
 }
-.footer_text a { 
-    color: hsl(228, 45%, 44%); 
+
+.footer_text a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+
+#carousel_container {
+    position: relative;
+}
+
+#carousel_container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(0deg, #fff, transparent);
+    opacity: 0;
+    z-index: 4;
+    transition: 0.2s all ease;
+}
+
+#carousel_container.active::before {
+    opacity: 1;
+    height: 50%;
+}
+
+#carousel_container .slide {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.visible_carousel {
+    display: block;
+}
+
+#carousel_container .slide .mainImage {
+    position: absolute;
+    width: 130vw;
+    height: 130vw;
+    object-fit: cover;
+    object-position: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: rotate;
+    animation-timing-function: cubic-bezier(0.02, 0.63, 0.23, 0.99);
+    animation-iteration-count: 1;
+    animation-duration: 1.1s;
+}
+
+#carousel_container .slide .roundOuter {
+    position: absolute;
+    width: 86vw;
+    height: 86vw;
+    overflow: hidden;
+    border-radius: 50%;
+    left: calc(50% - 43vw);
+    top: calc(50% - 43vw);
+    filter: brightness(0.9);
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#carousel_container .slide .roundOuter img {
+    position: absolute;
+    width: 130vw;
+    height: 130vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
+    animation-name: rotate;
+    animation-timing-function: cubic-bezier(0.02, 0.63, 0.23, 0.99);
+    animation-iteration-count: 1;
+    animation-duration: 1.3s;
+}
+
+#carousel_container .slide .roundInner {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    overflow: hidden;
+    left: calc(50% - 25vw);
+    top: calc(50% - 25vw);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+}
+
+#carousel_container .slide .roundInner img {
+    position: absolute;
+    width: 130vw;
+    height: 130vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
+    animation-name: rotate;
+    animation-timing-function: cubic-bezier(0.02, 0.63, 0.23, 0.99);
+    animation-iteration-count: 1;
+    animation-duration: 1.2s;
+}
+
+#carousel_container .slide .slideText {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#carousel_container .slide .slideText h1 {
+    font-size: 5vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5vw;
+    text-align: center;
+    padding-left: 5vw;
+    animation-delay: 1s;
+    filter: drop-shadow(0 2px 10px #000);
+    position: relative;
+}
+
+#carousel_container .slide .slideText h1::after {
+    content: "";
+    position: absolute;
+    width: 40vw;
+    height: 1px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#carousel_container .slide .slideText p {
+    text-align: center;
+    letter-spacing: 20px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-left: 1.3rem;
+    text-transform: uppercase;
+    animation-delay: 1.5s;
+    filter: drop-shadow(0 2px 10px #000);
+}
+
+#carousel_container .slide .slideText .buttonNav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    animation-delay: 1.7s;
+}
+
+#carousel_container .slide .slideText .buttonNav button {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1.3rem;
+    filter: drop-shadow(0 2px 10px #000);
+}
+
+#carousel_container .slide .slideText .buttonNav span {
+    display: grid;
+    width: 1px;
+    flex: 0 0 1px;
+    background-color: #fff;
+    filter: drop-shadow(0 2px 10px #000);
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    }
+}
+
+#about {
+    color: #999;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#about h2 {
+    color: #000;
+}
+
+#about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 575px) {
+    #carousel_container .slide .mainImage {
+        width: 130vh;
+        height: 130vh;
+    }
+
+    #carousel_container .slide .roundOuter {
+        width: 86vh;
+        height: 86vh;
+        left: calc(50% - 43vh);
+        top: calc(50% - 43vh);
+    }
+
+    #carousel_container .slide .roundOuter img {
+        width: 130vh;
+        height: 130vh;
+    }
+
+    #carousel_container .slide .roundInner {
+        width: 50vh;
+        height: 50vh;
+        left: calc(50% - 25vh);
+        top: calc(50% - 25vh);
+    }
+
+    #carousel_container .slide .roundInner img {
+        width: 130vh;
+        height: 130vh;
+    }
+
+    #carousel_container .slide .slideText h1 {
+        font-size: 9vw;
+        letter-spacing: 3vw;
+        padding-left: 3vw;
+    }
+
+    #carousel_container .slide .slideText p {
+        font-size: 5vw;
+        letter-spacing: 2vw;
+        padding-left: 2vw;
+    }
 }

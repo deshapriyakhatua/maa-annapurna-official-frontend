@@ -13,6 +13,18 @@ body {
     margin: 0;
 }
 
+/*------ for intersection observer ---------*/
+
+button, p, span, .left {
+    opacity: 0;
+    transition: all .9s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+
+
 .main_content * {
     padding: 0;
     margin: 0;
@@ -148,8 +160,15 @@ body {
     grid-template-columns: auto auto;
     gap: var(--grid-gap);
     position: relative;
-    rotate: 45deg;
 }
+
+.rotate_grid {
+    animation: rotateGrid .6s linear 0s 1 forwards;
+}
+
+@keyframes rotateGrid {
+    100% {transform: rotate(45deg);}
+  }
 
 .achive_container .icon {
     font-weight: 300;
@@ -347,7 +366,6 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
 }
 
 .another_container .left {
-    min-width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -362,7 +380,7 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
 }
 
 .another_container .left div {
-    width: 100%;
+    min-width: 350px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 2px solid white;
@@ -461,7 +479,7 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
 }
 
 @media screen and (max-width: 1440px) {
-    .another_container .left {
+    .another_container .left div {
         min-width: 300px;
     }
 }
@@ -470,7 +488,7 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
     .another_container .top{
         border-radius: 0;
     }
-    .another_container .left {
+    .another_container .left div {
         min-width: 250px;
     }
 }
@@ -478,6 +496,19 @@ background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgb
 @media screen and (max-width: 768px) {
     .another_container .top {
         flex-direction: column;
+        padding-top: 0;
+        border-top: 150px solid white;
+    }
+
+    .another_container .left {
+        height: 125px;
+        width: 100%;
+        position: relative;
+    }
+
+    .another_container .left div{
+        position: absolute;
+        bottom: 0px;
     }
 
     .another_container .top .right {

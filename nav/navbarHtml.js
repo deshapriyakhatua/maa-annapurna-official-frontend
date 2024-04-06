@@ -1,7 +1,7 @@
 document.write(`
     
     <nav class="nav">
-        <div class="container">
+        <div class="">
             <div class="logo">
                 <a href="/maa-annapurna-official-frontend">অন্নপূর্ণা মন্দির মেনকাপুর</a>
             </div>
