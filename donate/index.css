@@ -16,7 +16,9 @@ body {
 
 /*------ for intersection observer ---------*/
 
-p, span, .left {
+p,
+span,
+.left {
     opacity: 0;
     transition: all 1s ease-in-out;
 }
@@ -103,7 +105,7 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    
+
 }
 
 .banner_container button:hover {
@@ -135,6 +137,97 @@ button {
     }
 }
 
+
+/*---------- donor container --------*/
+
+.donor_contianer {
+    margin-top: 100px;
+    padding: 100px 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    font-family: 'secondFont';
+    
+    border-radius: 10px;
+}
+
+.animation-wrapper {
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(255, 108, 108);
+    position: relative;
+    color: #212121;
+    box-sizing: border-box;
+}
+
+.animate {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin-bottom: 16px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    animation: zoomInFade 3s linear 1s infinite forwards;
+}
+
+.animate-0 {
+    animation-delay: 0.5s;
+}
+
+.animate-1 {
+    animation-delay: 1s;
+}
+
+.animate-2 {
+    animation-delay: 1.5s;
+}
+
+.animate-3 {
+    animation-delay: 2s;
+}
+
+.animate-4 {
+    animation-delay: 2.5s;
+}
+
+.animate-5 {
+    animation-delay: 3s;
+}
+
+.animate-6 {
+    animation-delay: 3.5s;
+}
+
+@keyframes zoomInFade {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+        top: 100%;
+        visibility: hidden;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+        top: 50%;
+        visibility: visible;
+    }
+
+    75% {
+        top: 36%;
+    }
+
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+        top: 0;
+        visibility: hidden;
+    }
+}
+
+
+
 /*--------- achive container ---------*/
 
 .achive_container {
@@ -160,7 +253,7 @@ button {
 }
 
 .achive_container .right {
-    padding: calc( ((var(--grid-image-height)*2) + var(--grid-gap)) * .21) ;
+    padding: calc(((var(--grid-image-height)*2) + var(--grid-gap)) * .21);
 }
 
 .achive_container .right .grid {
@@ -175,8 +268,10 @@ button {
 }
 
 @keyframes rotateGrid {
-    100% {transform: rotate(45deg);}
-  }
+    100% {
+        transform: rotate(45deg);
+    }
+}
 
 .achive_container .icon {
     font-weight: 300;
@@ -375,8 +470,8 @@ button {
     align-items: center;
     gap: 50px;
     background-color: rgba(245, 10, 10, 0.819);
-    background: rgb(189,5,5);
-    background: radial-gradient(circle, rgba(189,5,5,1) 0%, rgba(172,9,8,1) 22%, rgba(144,6,15,1) 58%);
+    background: rgb(189, 5, 5);
+    background: radial-gradient(circle, rgba(189, 5, 5, 1) 0%, rgba(172, 9, 8, 1) 22%, rgba(144, 6, 15, 1) 58%);
     border-radius: 10px;
 }
 
@@ -472,13 +567,11 @@ button {
     border-bottom-left-radius: 50% 10%;
     border-bottom-right-radius: 50% 10%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    outline: 2000px solid rgba(0, 0, 0, 0);
     transition: all .3s ease-in-out;
 }
 
 .another_container .bottom div:hover {
     transform: scale(1.07) translate(0, 0px);
-    outline-color: rgba(0, 0, 0, 0.306);
 }
 
 .another_container .bottom div:nth-child(1) {
@@ -513,9 +606,10 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
-    .another_container .top{
+    .another_container .top {
         border-radius: 0;
     }
+
     .another_container .left div {
         min-width: 250px;
     }
@@ -534,7 +628,7 @@ button {
         position: relative;
     }
 
-    .another_container .left div{
+    .another_container .left div {
         position: absolute;
         bottom: 0px;
     }
@@ -549,13 +643,14 @@ button {
     .another_container {
         margin-top: 0;
     }
+
     .another_container .bottom {
         bottom: -30px;
         grid-template-columns: auto auto;
         max-width: 320px;
     }
 
-    .another_container .bottom div{
+    .another_container .bottom div {
         padding: 20px 10px 40px;
         border-bottom-left-radius: 50% 5%;
         border-bottom-right-radius: 50% 5%;
@@ -565,14 +660,16 @@ button {
 
 @keyframes shakeButton {
     0% {
-      transform: translate(2px, 0);
+        transform: translate(2px, 0);
     }
+
     50% {
-      transform: translate(-2px, 0);
-      transform: rotate(2deg);
-      opacity: .9;
+        transform: translate(-2px, 0);
+        transform: rotate(2deg);
+        opacity: .9;
     }
+
     100% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 }
