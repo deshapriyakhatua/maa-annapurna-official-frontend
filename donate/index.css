@@ -142,16 +142,27 @@ button {
 
 .donor_contianer {
     margin-top: 100px;
+    height: 400px;
     padding: 100px 30px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     font-family: 'secondFont';
-    
     border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .donor_contianer {
+        border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .donor_contianer {
+        height: 100vh;
+    }
 }
 
 .animation-wrapper {
     text-align: center;
-    height: 100vh;
     overflow: hidden;
     background: rgb(255, 108, 108);
     position: relative;
@@ -460,6 +471,7 @@ button {
 
 .another_container {
     margin-top: 100px;
+    margin-bottom: 100px;
     position: relative;
 }
 
@@ -616,6 +628,12 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+
+    .another_container {
+        margin-top: 0;
+        margin-bottom: 180px;
+    }
+
     .another_container .top {
         flex-direction: column;
         padding-top: 0;
@@ -636,13 +654,7 @@ button {
     .another_container .top .right {
         align-items: center;
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .another_container {
-        margin-top: 0;
-    }
+    }    
 
     .another_container .bottom {
         bottom: -30px;
@@ -672,4 +684,21 @@ button {
     100% {
         transform: translate(0, 0);
     }
+}
+
+
+
+/*------------ footer -------------*/
+
+.main_footer {
+    padding: 100px 0 10px;
+}
+
+.footer_text {
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer_text a {
+    color: hsl(228, 45%, 44%);
 }

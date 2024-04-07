@@ -72,3 +72,19 @@
         max-width: 100%;
     }
 }
+
+
+/*------------ footer -------------*/
+
+.main_footer {
+    padding: 150px 0 20px;
+}
+
+.footer_text {
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer_text a {
+    color: hsl(228, 45%, 44%);
+}

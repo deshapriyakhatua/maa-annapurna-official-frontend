@@ -137,3 +137,20 @@ body {
     color: black;
     font-weight: 600;
 }
+
+
+
+/*------------ footer -------------*/
+
+.main_footer {
+    padding: 100px 0 20px;
+}
+
+.footer_text {
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer_text a {
+    color: hsl(228, 45%, 44%);
+}

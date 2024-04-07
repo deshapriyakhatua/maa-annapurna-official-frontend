@@ -369,12 +369,18 @@ body {
 
 /*------------ footer -------------*/
 
-.footer_text {
-    font-size: 11px;
-    text-align: center;
+.main_footer {
+    padding: 100px 0 10px;
 }
 
-.footer_text a {
+.main_footer .footer_text {
+    font-size: 11px;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+}
+
+.main_footer .footer_text a {
     color: hsl(228, 45%, 44%);
 }
 
