@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'secondFont';
-    src: url(/maa-annapurna-official-frontend/global/files/fonts/Mukto.woff);
+    src: url(../global/files/fonts/Mukto.woff);
 }
 
 html,

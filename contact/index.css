@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'firstFont';
-  src: url(/maa-annapurna-official-frontend/global/files/fonts/CharukolaUltraLight.woff);
+  src: url(../global/files/fonts/CharukolaUltraLight.woff);
 }
 
 .main_content {

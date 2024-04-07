@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'firstFont';
-    src: url(/maa-annapurna-official-frontend/global/files/fonts/CharukolaUltraLight.woff);
+    src: url(../global/files/fonts/CharukolaUltraLight.woff);
 }
 
 @font-face {
     font-family: 'secondFont';
-    src: url(/maa-annapurna-official-frontend/global/files/fonts/Chano.woff);
+    src: url(../global/files/fonts/Chano.woff);
 }
 
 body {
@@ -64,7 +64,7 @@ button {
 }
 
 .banner_container {
-    background-image: url("/maa-annapurna-official-frontend/global/files/images/people_indian_temple.png");
+    background-image: url("../global/files/images/people_indian_temple.png");
     background-position: center;
     background-size: cover;
     padding: 100px 0;
@@ -345,7 +345,7 @@ button {
     top: -50%;
     left: -50%;
     transform: rotate(-45deg);
-    background: url(/maa-annapurna-official-frontend/global/files/images/donate_grid2.jpg) 0 0 repeat;
+    background: url(../global/files/images/donate_grid2.jpg) 0 0 repeat;
     background-position: center;
     background-size: contain;
 }
@@ -358,7 +358,7 @@ button {
     top: -50%;
     left: -50%;
     transform: rotate(-45deg);
-    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid5.jpg");
+    background-image: url("../global/files/images/donate_grid5.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -371,7 +371,7 @@ button {
     top: -50%;
     left: -50%;
     transform: rotate(-45deg);
-    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid4.jpg");
+    background-image: url("../global/files/images/donate_grid4.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -384,7 +384,7 @@ button {
     top: -50%;
     left: -50%;
     transform: rotate(-45deg);
-    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid3.jpg");
+    background-image: url("../global/files/images/donate_grid3.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -398,7 +398,7 @@ button {
     left: -50%;
     transform: rotate(-45deg);
     background-color: rgb(22, 232, 148);
-    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid.jpg");
+    background-image: url("../global/files/images/donate_grid.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -507,7 +507,7 @@ button {
     border-radius: 50%;
     border: 2px solid white;
     background-color: rgb(255, 0, 170);
-    background-image: url("/maa-annapurna-official-frontend/global/files/images/donate_grid.jpg");
+    background-image: url("../global/files/images/donate_grid.jpg");
     background-position: center;
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;

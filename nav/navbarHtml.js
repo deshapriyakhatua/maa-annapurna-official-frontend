@@ -1,42 +1,43 @@
 document.write(`
     
-    <nav class="nav">
-        <div class="">
-            <div class="logo">
-                <a href="/maa-annapurna-official-frontend">অন্নপূর্ণা মন্দির মেনকাপুর</a>
-            </div>
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="/maa-annapurna-official-frontend/donate">দান</a></li>
-                    <li><a href="/maa-annapurna-official-frontend/festival">উৎসব</a></li>
-                    <li><a href="/maa-annapurna-official-frontend/marriage">বিবাহ</a></li>
-                    <li><a href="/maa-annapurna-official-frontend/about">বিস্তারিত</a></li>
-                    <li><a href="/maa-annapurna-official-frontend/contact">যোগাযোগ</a></li>
-                </ul>
-            </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
+<style type="text/css">   @import url("../nav/navbar.css"); </style> 
+    
+<nav class="nav">
+    <div class="">
+        <div class="logo">
+            <a href="../">অন্নপূর্ণা মন্দির মেনকাপুর</a>
         </div>
-    </nav>
-
-    <div class="page_language_banner">
-    <span>Change Language : <b>English</b></span>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="../donate">দান</a></li>
+                <li><a href="../festival">উৎসব</a></li>
+                <li><a href="../marriage">বিবাহ</a></li>
+                <li><a href="../about">বিস্তারিত</a></li>
+                <li><a href="../contact">যোগাযোগ</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
     </div>
-    <!-- Jquery needed -->
-    <script src="/maa-annapurna-official-frontend/global/js/jquery.min.js"></script>
+</nav>
+
+<div class="page_language_banner">
+    <a href=""></a><span>Change page Language to <b>English</b></span>
+</div>
 
 
-    <script>
+<script>
 
-        /* Show menu options */
-        $('.navTrigger').click(function () {
-            $(this).toggleClass('active');
-            $("#mainListDiv").toggleClass("show_list");
-        });
+    document.querySelector(".navTrigger").addEventListener("click", (event)=>{
+        document.querySelector(".navTrigger").classList.toggle("active");
+        document.querySelector("#mainListDiv").classList.toggle("show_list");
+    });
 
-    </script>
-    <script src="/maa-annapurna-official-frontend/nav/navbar.js"></script>
+</script>
+
+<script src="../nav/navbar.js"></script>
+    
 `);
