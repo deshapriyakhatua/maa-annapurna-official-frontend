@@ -157,83 +157,66 @@ button {
 
 @media screen and (max-width: 768px) {
     .donor_contianer {
+        margin-top: 0;
         height: 100vh;
     }
 }
 
 .animation-wrapper {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    background: rgb(255, 108, 108);
+    background: #ffffff;
     position: relative;
-    color: #212121;
+    color: #F1D3B2;
     box-sizing: border-box;
 }
 
-.animate {
-    display: inline-block;
+.donor_contianer .animate {
+    padding: 30px 50px;
+    display: none;
     vertical-align: top;
-    width: 100%;
+    width: max-content;
     margin-bottom: 16px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    animation: zoomInFade 3s linear 1s infinite forwards;
+    background-color: yellow;
+    color: black;
+    font-family: 'firstFont';
+    font-size: 27px;
+    font-weight: 600;
+    border-radius: 20px;
+    mask-image: url(../global/files/images/mask2.png);
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    mask-position: center;
+    mask-origin: border-box;
+    animation: zoomInFade 4s cubic-bezier(1,.01,0,.99) 0s infinite forwards;
 }
 
-.animate-0 {
-    animation-delay: 0.5s;
-}
-
-.animate-1 {
-    animation-delay: 1s;
-}
-
-.animate-2 {
-    animation-delay: 1.5s;
-}
-
-.animate-3 {
-    animation-delay: 2s;
-}
-
-.animate-4 {
-    animation-delay: 2.5s;
-}
-
-.animate-5 {
-    animation-delay: 3s;
-}
-
-.animate-6 {
-    animation-delay: 3.5s;
+.donor_contianer .start_animation {
+    display: flex;
 }
 
 @keyframes zoomInFade {
     0% {
-        transform: scale(0.6);
+        filter: blur(2px);
+        transform: scale(10) translate(0px, 200px) rotate(98deg);
         opacity: 0;
-        top: 100%;
-        visibility: hidden;
     }
-
-    50% {
-        transform: scale(1);
+    35% {
+        transform: scale(1) translate(0px, 0px) rotate(0deg);
+        filter: blur(0px);
         opacity: 1;
-        top: 50%;
-        visibility: visible;
     }
-
-    75% {
-        top: 36%;
+    70% {
+        transform: scale(1) translate(0px, 0px) rotate(0deg);
+        filter: blur(0px);
+        opacity: 1;
     }
-
     100% {
-        transform: scale(1.4);
+        transform: scale(10) translate(0px, -200px) rotate(-58deg);
+        filter: blur(8px);
         opacity: 0;
-        top: 0;
-        visibility: hidden;
     }
 }
 

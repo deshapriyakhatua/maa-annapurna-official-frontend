@@ -1,4 +1,14 @@
 
+@font-face {
+    font-family: 'firstFont';
+    src: url(../global/files/fonts/CharukolaUltraLight.woff);
+}
+
+@font-face {
+    font-family: 'secondFont';
+    src: url(../global/files/fonts/Chano.woff);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +17,9 @@
 
 .main_content {
     margin: auto;
-    margin-top: 100px;
+    margin-top: 65px;
     padding: 0 100px;
+    font-family: 'secondFont';
 }
 
 @media (max-width: 1440px) {
@@ -27,9 +38,26 @@
 
 .header {
     text-align: center;
-    padding: 32px;
+    padding: 50px 32px 50px;
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
+.header_image {
+    background-image: url(../global/files/images/butterfly.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: border-box;
+    background-position: center;
+    height: 100px;
+    width: 100%;
+}
 .row {
     display: -ms-flexbox;
     /* IE10 */
