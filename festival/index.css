@@ -5,87 +5,35 @@
 
 .main_content {
     margin-top: 100px;
+    padding: 0 100px;
     width: 100vw;
     font-family: 'firstFont';
     position: relative;
 }
 
+@media screen and (max-width: 1440px) {
+    .main_content {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .main_content {
+        padding: 0;
+    }
+}
 .main_content>h1 {
     text-align: center;
     font-size: 28px;
 }
-
-.gellery_scroll {
-    width: 90%;
-    position: relative;
-}
-
-.scroll {
-    position: relative;
-    display: flex;
+.main_content>span {
+    display: inline-block;
     width: 100%;
-    overflow: hidden;
-    /* mask-image: linear-gradient(90deg, transparent, #fff 10%, #fff 50%, transparent);
-    -webkit-mask-image: linear-gradient(90deg, transparent, #ffffff 10%, #fff 80%, transparent) */
+    text-align: center;
+    font-size: 15px;
+    font-weight: 550;
 }
-
-.scroll div {
-    white-space: nowrap;
-    animation: scroll var(--time) linear infinite;
-    animation-delay: calc(var(--time)*-1);
-
-}
-
-.scroll div:nth-child(2) {
-    animation: scroll2 var(--time) linear infinite;
-    animation-delay: calc(var(--time)/-2);
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scroll2 {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-200%);
-    }
-}
-
-.imgBox div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.imgBox img {
-    border-radius: 20px;
-    max-width: 350px;
-    object-fit: contain;
-    scale: .92;
-}
-
 
 /*--------- card css --------*/
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    font-family: "Poppins";
-}
 
 :root {
     --color: #ffffff;
@@ -96,6 +44,8 @@ body {
 }
 
 .box {
+    margin: auto;
+    margin-top: 50px;
     position: relative;
     width: 400px;
     height: 400px;
@@ -106,10 +56,10 @@ body {
 .box::before {
     content: "";
     position: absolute;
-    background: linear-gradient(#cc00ff, #00d440);
-    inset: 0 120px;
+    background: linear-gradient(#cc3ef0, #ffa449);
+    inset: 0px 30px;
     transition: 0.5s;
-    animation: anime 4s linear infinite;
+    animation: anime 30s linear infinite;
 }
 
 @keyframes anime {
@@ -129,7 +79,7 @@ body {
 .box::after {
     content: "";
     position: absolute;
-    inset: 5px;
+    inset: 5px 1px;
     background: var(--color);
     border-radius: 50%;
     z-index: 1;
@@ -138,7 +88,7 @@ body {
 .box .card {
     position: absolute;
     inset: 30px;
-    border: 6px solid black;
+    border: 2px solid rgb(238, 55, 168);
     border-radius: 50%;
     z-index: 3;
     perspective: 800px;
@@ -171,7 +121,7 @@ body {
     align-items: center;
     flex-direction: column;
     color: rgb(255, 255, 255);
-    background-color: red;
+    background-color: rgb(240, 37, 121);
 }
 
 .box .back h2 {

@@ -158,7 +158,6 @@ button {
 @media screen and (max-width: 768px) {
     .donor_contianer {
         margin-top: 0;
-        height: 100vh;
     }
 }
 

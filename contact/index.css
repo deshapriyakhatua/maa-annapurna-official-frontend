@@ -6,7 +6,6 @@
 .main_content {
   margin-top: 100px;
   font-family: 'firstFont';
-  --slider_container_height: 450px;
 }
 
 
@@ -24,164 +23,158 @@ body {
   margin: 0;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-ul {
-  list-style-type: none;
-}
-ul i {
-  color: #fff;
-  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
-}
-ul i:hover {
-  color: #f2709c;
-}
-
-section {
-  font-family: "Poppins", sans-serif;
+.main_content {
+  margin: auto;
+  margin-top: 100px;
+  font-family: 'firstFont';
   font-weight: 300;
   font-style: normal;
-  padding-block: min(20vh, 6rem);
   text-align: center;
-  width: min(90rem, 90%);
-  margin-inline: auto;
+  width: min(80rem, 90%);
 }
-section span,
-section p,
-section h2,
-section h3 {
-  letter-spacing: 0.035rem;
-}
-section p {
-  line-height: 1.6;
-  color: #a3a3a3;
-  max-width: 50rem;
-  margin: 0 auto;
-  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
-}
-section .bg-watermark {
-  color: #aaa;
-  font-size: clamp(6rem, 1.3333rem + 14.9333vw, 20rem);
-  font-weight: 800;
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  transform: translatex(-50%) translatey(-15%);
-  user-select: none;
-  letter-spacing: 0.5rem;
-}
-section span {
+.main_content span {
   text-transform: uppercase;
   display: block;
-  font-size: 1.2rem;
-  color: #a3a3a3;
+  font-size: 15px;
+  color: #4141a4;
+  font-weight: 600;
 }
-section h2 {
-  font-size: clamp(3.5rem, 3rem + 1.6vw, 5rem);
-  margin-top: -0.625rem;
-  color: #000;
+.main_content h2 {
+  margin: 20px auto;
+  color: #7a3354b3;
+  font-size: 65px;
+  font-weight: 900;
+  user-select: none;
+  letter-spacing: 0.5rem;
+  filter: drop-shadow(5px 5px 4px rgba(247, 45, 45, 0.438));
+  text-transform: uppercase;
 }
-section .cards {
-  margin-top: 7rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
-  gap: 2rem;
+.main_content p {
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: #992d2d;
+  max-width: 50rem;
+  margin: 30px auto;
+  font-size: 15px;
+  font-weight: 600;
 }
-@media screen and (min-width: 51rem) {
-  section .cards {
-    gap: 0;
-    padding-bottom: 2.5rem;
+@media screen and (max-width: 768px) {
+  .main_content span {
+    font-size: 12px;
+  }
+  .main_content h2 {
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+  .main_content p {
+    font-size: 12px;
   }
 }
-section .cards .card {
+@media screen and (max-width: 600px) {
+  .main_content h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main_content h2 {
+    font-size: 35px;
+    letter-spacing: 1px;
+  }
+}
+.main_content .cards {
+  margin: auto;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  gap: 15px;
+}
+@media screen and (max-width: 600px) {
+  .main_content .cards {
+    gap: 35px;
+  }
+}
+.main_content .cards .card {
   position: relative;
-  cursor: pointer;
+  background-color: white;
+  box-shadow: rgb(240, 88, 154) 0px 20px 30px -10px;
+  aspect-ratio: 1/1;
 }
-section .cards .card h3,
-section .cards .card p {
-  text-transform: capitalize;
-}
-section .cards .card h3 {
-  font-size: clamp(1rem, 0.9167rem + 0.2667vw, 1.25rem);
-  font-weight: 400;
-  color: #f6f6f6;
-}
-section .cards .card p {
-  font-size: clamp(0.85rem, 0.75rem + 0.32vw, 1.15rem);
-  letter-spacing: 0.12rem;
-  font-weight: 300;
-  max-width: 100%;
-}
-section .cards .card::before {
+.main_content .cards .card::before {
   position: absolute;
   content: "";
   width: 5rem;
   height: 6.25rem;
   z-index: 0;
   transition: 0.3s ease-in-out;
-  background: #f2709c;
-  background: -webkit-linear-gradient(to left, #ff9472, #f2709c);
-  background: linear-gradient(to left, #ff9472, #f2709c);
+  background: linear-gradient(to left, #fd3939, #1074cd);
   top: -0.375rem;
   left: -0.375rem;
 }
-section .cards .card::after {
+.main_content .cards .card::after {
   position: absolute;
   inset: 0;
   content: "";
   width: 100%;
   height: 100%;
-  background: #232526;
-  background: -webkit-linear-gradient(to bottom, hsla(210deg, 2.99%, 26.27%, 0.2), hsla(0deg, 0%, 3.14%, 0.9));
-  background: linear-gradient(to bottom, hsla(210deg, 2.99%, 26.27%, 0.2), hsla(0deg, 0%, 3.14%, 0.9));
+  background: linear-gradient(to bottom, hsla(210, 1%, 74%, 0.105), hsla(0, 0%, 3%, 0.887));
+  background: linear-gradient(to bottom, #f009ba3e, #f60606b3);
 }
-section .cards .card img {
-  filter: grayscale(100%);
+.main_content .cards .card img {
+  max-width: 100%;
+  display: block;
+  filter: grayscale(90%);
   transition: 0.5s ease;
 }
-section .cards .card-content {
+.main_content .cards .card-content {
   position: absolute;
   bottom: 0;
-  z-index: 99;
+  z-index: 2;
   left: 0;
   color: #fff;
   width: 100%;
   padding: 1.875rem 1.25rem;
   text-align: center;
 }
-section .cards .card-content ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.625rem;
-  margin-top: 1.25rem;
+.main_content .cards .card-content a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
 }
-section .cards .card:hover img {
+.main_content .cards .card-content a:hover {
+  background: linear-gradient(to left, #8349ef7d, #ee2e2e6d);
+  border-radius: 5px;
+}
+
+.main_content .cards .card:hover img {
   filter: grayscale(0%);
 }
-section .cards .card:hover::before {
-  transform: scale(1.03);
+.main_content .cards .card:hover::before {
+  transform: scale(1.09);
 }
-section .cards .card:nth-child(1)::before {
+.main_content .cards .card:nth-child(1)::before {
   top: -0.375rem;
   left: -0.375rem;
 }
 @media screen and (min-width: 31.25rem) {
-  section .cards .card:nth-child(2) {
+  .main_content .cards .card:nth-child(2) {
     transform: translatey(15%);
   }
 }
-section .cards .card:nth-child(2)::before {
+.main_content .cards .card:nth-child(2)::before {
   bottom: -0.375rem;
   left: -0.375rem;
   top: auto;
+  background: linear-gradient(to bottom, #2958e4, #f33030);
 }
-section .cards .card:nth-child(3)::before {
+.main_content .cards .card:nth-child(3)::before {
   top: -0.375rem;
   left: -0.375rem;
+  background: linear-gradient(to left, #8349ef, #ee2e2e);
 }
 
 
@@ -191,6 +184,11 @@ section .cards .card:nth-child(3)::before {
   padding: 100px 0 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .main_footer {
+    padding: 150px 0 20px;
+  }
+}
 .footer_text {
   font-size: 11px;
   text-align: center;
