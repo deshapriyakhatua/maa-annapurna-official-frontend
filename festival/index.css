@@ -1,13 +1,9 @@
-@font-face {
-    font-family: 'firstFont';
-    src: url(../global/files/fonts/CharukolaUltraLight.woff);
-}
+
 
 .main_content {
     margin-top: 100px;
     padding: 0 100px;
     width: 100vw;
-    font-family: 'firstFont';
     position: relative;
 }
 
@@ -121,7 +117,7 @@ body {
     align-items: center;
     flex-direction: column;
     color: rgb(255, 255, 255);
-    background-color: rgb(240, 37, 121);
+    background-color: rgb(240, 37, 37);
 }
 
 .box .back h2 {
@@ -143,13 +139,12 @@ body {
     color: #f7f7f7;
     margin-top: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-
     transition: 0.5s;
 }
 
 .box .back a:hover {
     letter-spacing: 0.2rem;
-    background: linear-gradient(90deg, #6616d0, #ac34e7);
+    background: linear-gradient(90deg, #d0162f, #e73434);
     transition: 0.4s ease-in-out;
 }
 
@@ -191,14 +186,6 @@ body {
 
 /*-------- flip container -------*/
 
-@import url(https://fonts.googleapis.com/css?family=Raleway|Reenie+Beanie);
-
-* {
-    box-sizing: border-box;
-}
-
-
-
 #content img {
     width: 100%;
 }
@@ -209,7 +196,6 @@ body {
 
 #content .caption,
 #content h1 {
-    font-family: monospace;
     font-size: 2em;
     padding: 10px 10px 0 10px;
 }

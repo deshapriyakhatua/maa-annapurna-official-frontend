@@ -1,36 +1,17 @@
-@font-face {
-  font-family: 'firstFont';
-  src: url(../global/files/fonts/CharukolaUltraLight.woff);
-}
 
-.main_content {
-  margin-top: 100px;
-  font-family: 'firstFont';
-}
-
-
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-}
 
 .main_content {
   margin: auto;
   margin-top: 100px;
-  font-family: 'firstFont';
   font-weight: 300;
   font-style: normal;
   text-align: center;
-  width: min(80rem, 90%);
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .main_content {
+    padding: 0 30px;
+  }
 }
 .main_content span {
   text-transform: uppercase;
@@ -84,16 +65,18 @@ body {
 .main_content .cards {
   margin: auto;
   margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
-  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .main_content .cards {
     gap: 35px;
   }
 }
 .main_content .cards .card {
+  width: 300px;
   position: relative;
   background-color: white;
   box-shadow: rgb(240, 88, 154) 0px 20px 30px -10px;
@@ -160,7 +143,7 @@ body {
   top: -0.375rem;
   left: -0.375rem;
 }
-@media screen and (min-width: 31.25rem) {
+@media screen and (min-width: 1024px) {
   .main_content .cards .card:nth-child(2) {
     transform: translatey(15%);
   }

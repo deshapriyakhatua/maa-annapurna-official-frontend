@@ -5,15 +5,15 @@ document.write(`
 <nav class="nav">
     <div class="">
         <div class="logo">
-            <a href="../">অন্নপূর্ণা মন্দির মেনকাপুর</a>
+            <a href="../">Annapurna Mandir Menkapur</a>
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
-                <li><a href="../donate">দান</a></li>
-                <li><a href="../festival">উৎসব</a></li>
-                <li><a href="../marriage">বিবাহ</a></li>
-                <li><a href="../about">বিস্তারিত</a></li>
-                <li><a href="../contact">যোগাযোগ</a></li>
+                <li><a href="../donate">Donate</a></li>
+                <li><a href="../festival">Festival</a></li>
+                <li><a href="../marriage">Marriage</a></li>
+                <li><a href="../about">About</a></li>
+                <li><a href="../contact">Contact</a></li>
             </ul>
         </div>
         <span class="navTrigger">
@@ -25,7 +25,7 @@ document.write(`
 </nav>
 
 <div class="page_language_banner">
-    <a href=""></a><span>Change page Language to <b>English</b></span>
+    <a href=""></a><span>Change page Language to <b>Bengali</b></span>
 </div>
 
 

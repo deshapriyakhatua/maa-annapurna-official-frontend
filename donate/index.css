@@ -1,17 +1,3 @@
-@font-face {
-    font-family: 'firstFont';
-    src: url(../global/files/fonts/CharukolaUltraLight.woff);
-}
-
-@font-face {
-    font-family: 'secondFont';
-    src: url(../global/files/fonts/Chano.woff);
-}
-
-body {
-    padding: 0;
-    margin: 0;
-}
 
 
 /*------ for intersection observer ---------*/
@@ -32,17 +18,11 @@ button {
     opacity: 1;
 }
 
-
-.main_content * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/*---------- main content ---------*/
 
 .main_content {
     margin-top: 100px;
     padding: 0 100px;
-    font-family: 'firstFont';
 }
 
 @media screen and (max-width: 1440px) {
@@ -64,7 +44,7 @@ button {
 }
 
 .banner_container {
-    background-image: url("../global/files/images/people_indian_temple.png");
+    background-image: url("../global/files/images/annapurnanight2.jpg");
     background-position: center;
     background-size: cover;
     padding: 100px 0;
@@ -74,32 +54,31 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    font-family: 'secondFont';
+    gap: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
 }
 
 .banner_container span {
-    background-color: rgba(0, 0, 0, 0.371);
+    background-color: rgba(0, 0, 0, 0.621);
     padding: 5px 10px;
-    font-size: 25px;
+    font-size: 19px;
+    font-weight: 300;
     text-align: center;
 }
 
 .banner_container p {
-    background-color: rgba(0, 0, 0, 0.467);
+    background-color: rgba(0, 0, 0, 0.71);
     padding: 25px 30px;
-    font-size: 45px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 400;
     text-align: center;
 }
 
 .banner_container button {
     background-color: rgb(180, 5, 5);
     padding: 5px 50px;
-    font-family: 'secondFont';
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 500;
     color: rgb(255, 255, 255);
     border: none;
@@ -125,15 +104,15 @@ button {
 
 @media screen and (max-width: 768px) {
     .banner_container {
-        gap: 100px;
+        gap: 50px;
     }
 
     .banner_container span {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .banner_container p {
-        font-size: 28px;
+        font-size: 25px;
     }
 }
 
@@ -145,7 +124,6 @@ button {
     height: 400px;
     padding: 100px 30px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    font-family: 'secondFont';
     border-radius: 10px;
 }
 
@@ -180,9 +158,8 @@ button {
     margin-bottom: 16px;
     background-color: yellow;
     color: black;
-    font-family: 'firstFont';
-    font-size: 27px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     border-radius: 20px;
     mask-image: url(../global/files/images/mask2.png);
     mask-repeat: no-repeat;
@@ -227,7 +204,6 @@ button {
     margin-top: 100px;
     padding: 100px 30px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    font-family: 'secondFont';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,14 +248,14 @@ button {
 }
 
 .achive_container .small_text {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     color: rgb(168, 46, 2);
 }
 
 .achive_container .achive_title {
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 500;
     color: rgb(161, 8, 8);
 }
 
@@ -288,8 +264,7 @@ button {
     width: 20%;
     background-color: rgb(255, 27, 27);
     padding: 5px 20px;
-    font-family: 'secondFont';
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     color: rgb(255, 255, 255);
     border: none;
@@ -431,7 +406,7 @@ button {
     }
 
     .achive_container .small_text {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .achive_container .achive_title {
@@ -465,7 +440,7 @@ button {
     gap: 50px;
     background-color: rgba(245, 10, 10, 0.819);
     background: rgb(189, 5, 5);
-    background: radial-gradient(circle, rgba(189, 5, 5, 1) 0%, rgba(172, 9, 8, 1) 22%, rgba(144, 6, 15, 1) 58%);
+    background: radial-gradient(circle, rgb(158, 77, 7) 0%, rgb(136, 67, 7) 22%, rgb(239, 60, 24) 58%);
     border-radius: 10px;
 }
 
@@ -501,16 +476,9 @@ button {
 }
 
 .another_container .right p {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 1;
-    font-weight: 700;
-    color: white;
-}
-
-.another_container .right span {
-    font-size: 17px;
-    font-weight: 600;
-    padding: 5px;
+    font-weight: 400;
     color: white;
 }
 
@@ -518,7 +486,6 @@ button {
     width: 180px;
     background-color: rgb(168, 13, 59);
     padding: 10px 40px;
-    font-family: 'secondFont';
     font-size: 30px;
     font-weight: 500;
     color: rgb(255, 255, 255);
@@ -556,6 +523,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     color: white;
     border-top: 2px solid white;
     border-bottom-left-radius: 50% 10%;
