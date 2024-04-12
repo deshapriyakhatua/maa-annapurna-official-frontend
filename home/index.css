@@ -1,14 +1,19 @@
+:root {
+    --main-content-padding: 100px;
+}
 
 .body_main_container {
     margin-top: 100px;
-    padding: 0 100px;
+    padding: 0 var(--main-content-padding);
     font-size: 62.5%;
-    font-size: 10px;
+    font-size: 10px; 
 }
 @media (max-width: 1440px) {
+    :root {
+        --main-content-padding: 30px;
+    }
     .body_main_container {
         margin-top:63px;
-        padding: 30px;
     }
 }
 
@@ -48,8 +53,8 @@
 }
 
 #carousel_container .slide {
-    width: 100%;
-    min-height: 100vh;
+    width: calc(1440px - (2 *var(--main-content-padding)));
+    aspect-ratio: 1/1;
     position: relative;
     overflow: hidden;
 }
@@ -64,8 +69,8 @@
 
 #carousel_container .slide .mainImage {
     position: absolute;
-    width: 130vw;
-    height: 130vw;
+    width: calc(1440px - (2 *var(--main-content-padding)));
+    aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
     left: 50%;
@@ -92,8 +97,8 @@
 
 #carousel_container .slide .roundOuter img {
     position: absolute;
-    width: 130vw;
-    height: 130vw;
+    width: calc(1440px - (2 *var(--main-content-padding)));
+    aspect-ratio: 1/1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -107,11 +112,11 @@
 
 #carousel_container .slide .roundInner {
     position: absolute;
-    width: 50vw;
-    height: 50vw;
+    width: 40vw;
+    height: 40vw;
     overflow: hidden;
-    left: calc(50% - 25vw);
-    top: calc(50% - 25vw);
+    left: calc(50% - 20vw);
+    top: calc(50% - 20vw);
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 2;
@@ -119,8 +124,8 @@
 
 #carousel_container .slide .roundInner img {
     position: absolute;
-    width: 130vw;
-    height: 130vw;
+    width: calc(1440px - (2 *var(--main-content-padding)));
+    aspect-ratio: 1/1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -135,45 +140,46 @@
 
 @keyframes rotate {
     0% {
-        transform: translate(-50%, -50%) rotate(0deg) scale(5);
+        transform: translate(-50%, -50%) rotate(0deg) scale(7);
     }
 
     100% {
         transform: translate(-50%, -50%) rotate(360deg) scale(1);
     }
 }
-
-@media (max-width: 575px) {
-    #carousel_container .slide .mainImage {
-        width: 130vh;
-        height: 130vh;
-    }
-
+@media (min-width: 1440px) {
     #carousel_container .slide .roundOuter {
-        width: 86vh;
-        height: 86vh;
-        left: calc(50% - 43vh);
-        top: calc(50% - 43vh);
+        width: 1100px;
+        height: 1100px;
+        left: calc(50% - 550px);
+        top: calc(50% - 550px);
     }
-
-    #carousel_container .slide .roundOuter img {
-        width: 130vh;
-        height: 130vh;
-    }
-
     #carousel_container .slide .roundInner {
-        width: 50vh;
-        height: 50vh;
-        left: calc(50% - 25vh);
-        top: calc(50% - 25vh);
+        width: 600px;
+        height: 600px;
+        left: calc(50% - 300px);
+        top: calc(50% - 300px);
     }
-
-    #carousel_container .slide .roundInner img {
-        width: 130vh;
-        height: 130vh;
-    }
-
 }
+
+@media (max-width: 1440px) {
+    #carousel_container .slide {
+        width: 100%;
+    }
+    #carousel_container .slide .mainImage,
+    #carousel_container .slide .roundOuter img,
+    #carousel_container .slide .roundInner img {
+        width: calc(100vw - (2 * var(--main-content-padding)));
+    }
+}
+@media (max-width: 1024px) {
+    #carousel_container .slide .mainImage,
+    #carousel_container .slide .roundOuter img,
+    #carousel_container .slide .roundInner img {
+        width: 100vw;
+    }
+}
+
 
 
 /*------------ highlights container ---------*/
@@ -229,34 +235,11 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    transition: all .3s ease-in-out;
-     animation: zoomInFade 6s linear 0s infinite forwards; 
+    transition: all .3s ease-in-out; 
 }
 
-
-
-.animate-1 {
-    animation-delay: 6s;
-}
-
-.animate-2 {
-    animation-delay: 12s;
-}
-
-.animate-3 {
-    animation-delay: 18s;
-}
-
-.animate-4 {
-    animation-delay: 24s;
-}
-
-.animate-5 {
-    animation-delay: 30s;
-}
-
-.animate-6 {
-    animation-delay: 36s;
+.animate.start_anime {
+    animation: zoomInFade 6s linear 0s infinite forwards;
 }
 
 @keyframes zoomInFade {

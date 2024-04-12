@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
 window.addEventListener("load", ()=>{
 
     let carouselItems = document.querySelectorAll(".carousel-item");
-    let itemIndex = 0;
+    let itemIndex = 1;
     let carouselInterval = setInterval(()=>{
         if(itemIndex >= carouselItems.length){
             itemIndex = 0;
@@ -28,9 +28,25 @@ window.addEventListener("load", ()=>{
             }
         });
         itemIndex++;
-    }, 3000);
+    }, 5000);
 
 
+    let animeItems = document.querySelectorAll(".animate");
+    let animeIndex = 1;
+    let animeInterval = setInterval(()=>{
+        if(animeIndex >= carouselItems.length){
+            animeIndex = 0;
+        }
+        animeItems.forEach((elem,i)=>{
+            if(elem.classList.contains("start_anime")){
+                elem.classList.remove("start_anime");
+            }
+            if(animeIndex == i){
+                elem.classList.add("start_anime");
+            }
+        });
+        animeIndex++;
+    }, 6000);
 
 
 
