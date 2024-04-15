@@ -44,11 +44,9 @@ button {
 }
 
 .banner_container {
-    background-image: url("../global/files/images/annapurnanight2.jpg");
-    background-position: center;
-    background-size: cover;
+    position: relative;
+    background-color: #f77153ec;
     padding: 100px 0;
-    opacity: 1;
     color: white;
     display: flex;
     flex-direction: column;
@@ -60,7 +58,7 @@ button {
 }
 
 .banner_container span {
-    background-color: rgba(0, 0, 0, 0.621);
+    background-color:  rgba(248, 28, 12, 0.365);
     padding: 5px 10px;
     font-size: 19px;
     font-weight: 300;
@@ -68,7 +66,7 @@ button {
 }
 
 .banner_container p {
-    background-color: rgba(0, 0, 0, 0.71);
+    background-color: rgba(248, 28, 12, 0.559);
     padding: 25px 30px;
     font-size: 25px;
     font-weight: 400;
